@@ -6,3 +6,4 @@ DATABASE_URI = 'postgresql+psycopg2://{dbuser}:{dbpass}@{dbhost}/{dbname}'.forma
     dbhost=os.getenv('AZURE_POSTGRESQL_HOST'),
     dbname=os.getenv('AZURE_POSTGRESQL_NAME')
 )
+SQLALCHEMY_DATABASE_URI = f"postgresql://{DATABASE_CONFIG['user']}:{DATABASE_CONFIG['password']}@{DATABASE_CONFIG['host']}/{DATABASE_CONFIG['database']}?sslmode=require"
